@@ -51,7 +51,7 @@ animal_color = input("Does this animal have black on it? (Yes or No)")
 animal_age = int(input("What is the animal's age in months?"))
 cat_special = input("Is this a normal cat breed? (Yes or No")
 
-#Cat, Dog or Other
+
 #Cat
 if animal_type.lower() == "cat":
 #Special Breed
@@ -91,7 +91,7 @@ if animal_type.lower() == "cat":
          points = points + 4
     else:
         print("Sorry, something went wrong")
-#Dog
+
     
 #Dog
 elif animal_type.lower() == "dog":
@@ -142,18 +142,26 @@ elif animal_type.lower() == "dog":
     
 
 
-#Total Points
-if points < 4:
-    green_light.color("green")
-    print(animal_name, "will have no problem being adopted!")
-elif points >= 4 and points < 6:
-    yellow_light.color("yellow")
-    print(animal_name, "may need some help to be adopted")
-elif points >= 6:
-    red_light.color("red")
-    print(animal_name, "will definitely need help being adopted - consider discounting adoption fee right away!")
+#Other
+elif animal_type.lower() == "other":
+    print("Green - this animal will be adopted fine!")
 else:
-    pass
+    print("Sorry, not an animal type, please try again")
+
+
+#Total Points
+if animal_type.lower() == "cat" or "dog":
+    if points < 4:
+        green_light.color("green")
+        print(animal_name, "will have no problem being adopted!")
+    elif points >= 4 and points < 6:
+        yellow_light.color("yellow")
+        print(animal_name, "may need some help to be adopted")
+    elif points >= 6:
+        red_light.color("red")
+        print(animal_name, "will definitely need help being adopted - consider discounting adoption fee right away!")
+    else:
+        pass
 
 
 

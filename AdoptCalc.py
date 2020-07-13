@@ -92,8 +92,11 @@ if animal_type.lower() == "cat":
     else:
         print("Sorry, something went wrong")
 #Dog
+    
+#Dog
 elif animal_type.lower() == "dog":
     bully_breed = input("Is this a bully breed dog? (Yes/No)")
+#Dog breed
     if bully_breed.lower() == "yes":
         points = points + 3
     elif bully_breed.lower() == "no":
@@ -106,40 +109,38 @@ elif animal_type.lower() == "dog":
             pass
     else:
         print("Sorry, I didn't get that. Please try again")
-elif animal_type.lower() == "other":
-    print("Green - this animal will be adopted fine!")
-else:
-    print("Sorry, not an animal type, please try again")
-
-#Animal colors
-if animal_solid.lower() == "yes":
-    if animal_color.lower() == "yes":
-        points = points + 3
-    elif animal_color.lower() == "no":
-        points = points - 1
-    else:
-        print("Sorry, something went wrong. Please try again.")
-elif animal_solid.lower() == "no":
-    if animal_color.lower() == "yes":
-        points = points + 2
-    elif animal_color.lower() == "no":
+#Dog Colors
+    if animal_solid.lower() == "yes":
+        if animal_color.lower() == "yes":
+            points = points + 3
+        elif animal_color.lower() == "no":
+            points = points - 1
+        else:
+            print("Sorry, something went wrong. Please try again.")
+    elif animal_solid.lower() == "no":
+        if animal_color.lower() == "yes":
+            points = points + 2
+        elif animal_color.lower() == "no":
+            points = points + 1
+        else:
+            print("Sorry, something went wrong. Try again.")
+    else: 
+        print("Sorry, I didn't get that")
+#Dog Age
+     if animal_age < 12:
+        print("Green - this animal will have no problem getting adopted!")
+    elif animal_age >= 12 and animal_age < 36:
         points = points + 1
+    elif animal_age >=36 and animal_age < 60:
+        points = points + 2
+    elif animal_age >= 60 and animal_age < 96:
+         points = points + 3
+    elif animal_age > 96:
+         points = points + 4
     else:
-        print("Sorry, something went wrong. Try again.")
+        print("Sorry, something went wrong")
+    
 
-#Animal Age
-if animal_age < 12:
-    print("Green - this animal will have no problem getting adopted!")
-elif animal_age >= 12 and animal_age < 36:
-    points = points + 1
-elif animal_age >=36 and animal_age < 60:
-    points = points + 2
-elif animal_age >= 60 and animal_age < 96:
-    points = points + 3
-elif animal_age > 96:
-    points = points + 4
-else:
-    print("Sorry, something went wrong")
 
 #Total Points
 if points < 4:

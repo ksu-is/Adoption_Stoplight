@@ -162,6 +162,8 @@ if animal_type.lower() == "cat" or "dog":
         print(animal_name, "will definitely need help being adopted - consider discounting adoption fee right away!")
     else:
         pass
+else:
+    pass
 
 
 

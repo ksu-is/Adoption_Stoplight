@@ -34,9 +34,10 @@ red_light.goto(-180,200)
 #Yellow Light
 yellow_light= turtle.Turtle()
 yellow_light.shape("circle")
+yellow_light.shapesize(8,8,8)
 yellow_light.color("grey")
 yellow_light.penup()
-yellow_light.goto(0,0)
+yellow_light.goto(-180,20)
 
 #Green Light
 green_light= turtle.Turtle()

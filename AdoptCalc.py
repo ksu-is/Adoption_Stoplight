@@ -21,13 +21,15 @@ pen.rt(90)
 pen.fd(560)
 
 
+
 #Red Light
 
 red_light= turtle.Turtle()
 red_light.shape("circle")
+red_light.shapesize(8,8,8)
 red_light.color("grey")
 red_light.penup()
-red_light.goto(0,40)
+red_light.goto(-180,200)
 
 #Yellow Light
 yellow_light= turtle.Turtle()

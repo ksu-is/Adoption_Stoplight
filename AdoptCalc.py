@@ -42,9 +42,10 @@ yellow_light.goto(-180,20)
 #Green Light
 green_light= turtle.Turtle()
 green_light.shape("circle")
+green_light.shapesize(8,8,8)
 green_light.color("grey")
 green_light.penup()
-green_light.goto(0,-40)
+green_light.goto(-180,-160)
 
 #About the animal
 points = 0

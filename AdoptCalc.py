@@ -48,17 +48,20 @@ green_light.penup()
 green_light.goto(-180,-160)
 
 #About the animal
-points = 0
-animal_name = input("What is the animal's name?")
-animal_type = input("Is the animal a cat, a dog, or other?")
-animal_solid = input("Is this animal a solid color? (Yes or No)")
-animal_color = input("Does this animal have black on it? (Yes or No)")
-animal_age = int(input("What is the animal's age in months?"))
-cat_special = input("Is this a normal cat breed? (Yes or No")
+screen = turtle.Screen()
 
+animal_name = screen.textinput("How Adoptable?","What is the animal's name?")
+animal_type = screen.textinput("How Adoptable?","Is the animal a cat or a dog?")
+animal_solid = screen.textinput("How Adoptable?","Is this animal a solid color? (Yes or No)")
+animal_color = screen.textinput("How Adoptable?","Does this animal have black on it? (Yes or No)")
+animal_age = int(screen.textinput("How Adoptable?","What is the animal's age in months?"))
+
+
+points = 0
 
 #Cat
 if animal_type.lower() == "cat":
+    cat_special = input("Is this a normal cat breed? (Yes or No")
 #Special Breed
     if cat_special.lower() == "yes":
         points = points + 1

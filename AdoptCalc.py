@@ -21,7 +21,6 @@ pen.rt(90)
 pen.fd(560)
 
 
-
 #Red Light
 
 red_light= turtle.Turtle()
@@ -50,8 +49,10 @@ green_light.color("grey")
 green_light.penup()
 green_light.goto(-180,-160)
 
+
 #About the animal
 screen = turtle.Screen()
+
 
 animal_name = screen.textinput("How Adoptable?","What is the animal's name?")
 animal_type = screen.textinput("How Adoptable?","Is the animal a cat or a dog?")
@@ -59,13 +60,12 @@ animal_solid = screen.textinput("How Adoptable?","Is this animal a solid color? 
 animal_color = screen.textinput("How Adoptable?","Does this animal have black on it? (Yes or No)")
 animal_age = int(screen.textinput("How Adoptable?","What is the animal's age in months?"))
 
-
 points = 0
 
 #Cat
 if animal_type.lower() == "cat":
-    cat_special = input("Is this a normal cat breed? (Yes or No")
 #Special Breed
+    cat_special = screen.textinput("How Adoptable?","Is this a normal cat breed? (Yes or No")
     if cat_special.lower() == "yes":
         points = points + 1
     elif cat_special.lower() == "no":

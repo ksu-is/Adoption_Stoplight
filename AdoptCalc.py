@@ -65,7 +65,7 @@ points = 0
 #Cat
 if animal_type.lower() == "cat":
 #Special Breed
-    cat_special = screen.textinput("How Adoptable?","Is this a normal cat breed? (Yes or No")
+    cat_special = screen.textinput("How Adoptable?","Is this a normal cat breed? (Yes or No)")
     if cat_special.lower() == "yes":
         points = points + 1
     elif cat_special.lower() == "no":
@@ -103,15 +103,16 @@ if animal_type.lower() == "cat":
     else:
         print("Sorry, something went wrong")
 
+
     
 #Dog
 elif animal_type.lower() == "dog":
-    bully_breed = input("Is this a bully breed dog? (Yes/No)")
+    bully_breed = screen.textinput("How Adoptable?","Is this a bully breed dog? (Yes/No)")
 #Dog breed
     if bully_breed.lower() == "yes":
         points = points + 3
     elif bully_breed.lower() == "no":
-        toy_breed = input("Is this a toy breed dog?")
+        toy_breed = screen.textinput("How Adoptable?","Is this a toy breed dog?")
         if toy_breed.lower() == "yes":
             points = points - 1
         elif toy_breed.lower() == "no":
@@ -138,7 +139,7 @@ elif animal_type.lower() == "dog":
     else: 
         print("Sorry, I didn't get that")
 #Dog Age
-     if animal_age < 12:
+    if animal_age < 12:
         print("Green - this animal will have no problem getting adopted!")
     elif animal_age >= 12 and animal_age < 36:
         points = points + 1
@@ -152,14 +153,6 @@ elif animal_type.lower() == "dog":
         print("Sorry, something went wrong")
     
 
-
-#Other
-elif animal_type.lower() == "other":
-    print("Green - this animal will be adopted fine!")
-else:
-    print("Sorry, not an animal type, please try again")
-
-
 #Total Points
 text_turtle= turtle.Turtle()
 text_turtle.color("white")
@@ -167,13 +160,13 @@ text_turtle.hideturtle()
 if animal_type.lower() == "cat" or "dog":
     if points < 4:
         green_light.color("green")
-        text_turtle.write(animal_name + " will have no problem being adopted!", font=("Arial",16,"normal"))
+        text_turtle.write(animal_name + " will have no \n problem being adopted!", font=("Arial",32,"normal"))
     elif points >= 4 and points < 6:
         yellow_light.color("yellow")
-        text_turtle.write(animal_name + " may need some help to be adopted")
+        text_turtle.write(animal_name + " may need some \n help to be adopted", font=("Arial",32,"normal"))
     elif points >= 6:
         red_light.color("red")
-        text_turtle.write(animal_name + " will definitely need help being adopted - consider discounting adoption fee right away!")
+        text_turtle.write(animal_name + " will definitely \n need help being adopted \n - consider discounting \n adoption fee right away!", font=("Arial",32,"normal"))
     else:
         pass
 else:
